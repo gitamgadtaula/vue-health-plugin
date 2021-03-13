@@ -8,7 +8,7 @@
     "build-library" : "vue-cli-service build --target lib --name vue-health-plugin ./src/install.js",
     "lint": "vue-cli-service lint"
   },
-  "main" : ".dist/vue-health-plugin.js",
+  "main" : ".dist/vue-health-plugin.common.js",
   "files": ["dist"],
   "dependencies": {
     "core-js": "^3.6.5",    
