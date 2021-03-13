@@ -6,7 +6,7 @@ const VueHealthPlugin = {
     if (options.key == "somekey") {
       Vue.component("health-plugin", HealthPlugin);
     } else {
-      console.log("%c !! Health plugin !! Authentication failed ", "color: red; font-size: 20px");
+      console.log("%c !! Vue Health plugin !! Authentication failed ", "color: red; font-size: 20px");
       console.warn(
         "Authentication failed for health-plugin, please provide a valid encryption key"
       );
