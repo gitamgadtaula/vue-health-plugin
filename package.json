@@ -1,6 +1,6 @@
 {
   "name": "vue-health-plugin",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "author": "gitamgadtaula",
   "scripts": {
@@ -9,10 +9,11 @@
     "build-library": "vue-cli-service build --target lib --name vue-health-plugin ./src/install.js",
     "lint": "vue-cli-service lint"
   },
-  
   "repository": "https://github.com/gitamgadtaula/vue-health-plugin",
   "main": ".dist/vue-health-plugin.common.js",
-  "files": ["dist/*"],
+  "files": [
+    "dist/*"
+  ],
   "license": "MIT",
   "dependencies": {
     "core-js": "^3.6.5",
