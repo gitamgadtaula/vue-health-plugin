@@ -12,7 +12,11 @@
   "repository": "https://github.com/gitamgadtaula/vue-health-plugin",
   "main": "dist/vue-health-plugin.common.js",
   "files": [
-    "dist"
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
   ],
   "license": "MIT",
   "dependencies": {

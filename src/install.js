@@ -1,10 +1,16 @@
 import HealthPlugin from "./components/HealthPlugin.vue";
 
 const VueHealthPlugin = {
-  install(Vue) {
-    // Let's register our component globally
-    // https://vuejs.org/v2/guide/components-registration.html
-    Vue.component("health-plugin", HealthPlugin);
+  install(Vue, options = {}) {
+    const someKey = "599u3njfinn_jht748";
+    if (options.key == "somekey") {
+      Vue.component("health-plugin", HealthPlugin);
+    } else {
+      console.log("%c !! Health plugin !! Authentication failed ", "color: red; font-size: 20px");
+      console.warn(
+        "Authentication failed for health-plugin, please provide a valid encryption key"
+      );
+    }
   },
 };
 
