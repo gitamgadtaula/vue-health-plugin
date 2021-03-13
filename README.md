@@ -1,24 +1,28 @@
-<<<<<<< HEAD
-# vue-plugin
+# vue-health-plugin
 
 ## Project setup
-# Using the Package
 
 
-`` npm install --save vue-health-plugin ``
+     npm i vue-health-plugin 
 
-Once you have installed the package, in your entry file of the repository (main.js) if you are using it in a Vue CLI project. Write the import command
+Once you have installed the package, in your entry file of the repository (main.js) if you are using it in a Vue CLI project. Write the import command .
 
-`` import HealthPlugin from 'vue-health-plugin' ``
+     import HealthPlugin from 'vue-health-plugin' 
 
 To install it globally.
 
-`` Vue.use(HealthPlugin) ``
+     Vue.use(HealthPlugin,{ key: YOUR_ACCESS_KEY }) 
 
-If not globally, you can also import the individual components locally.
+`` fake_access_key = 599u3njfinn_jht748 ``
 
-`` import HealthPlugin from 'vue-health-plugin' ``
-=======
-# vue-health-plugin
-A custom vue js health plugin
->>>>>>> main
+In your vue component: 
+
+    <template>
+     <div id="app">
+        <health-plugin />
+     </div>
+    </template>
+
+
+### That should do it !!
+
