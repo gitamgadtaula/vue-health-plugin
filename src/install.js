@@ -1,16 +1,16 @@
-import HelloWorld from "./components/HelloWorld.vue";
+import HealthPlugin from "./components/HealthPlugin.vue";
 
-const HelloWorldSimple = {
+const VueHealthPlugin = {
   install(Vue) {
     // Let's register our component globally
     // https://vuejs.org/v2/guide/components-registration.html
-    Vue.component("vue-health-plugin", HelloWorld);
+    Vue.component("health-plugin", HealthPlugin);
   },
 };
 
 // Automatic installation if Vue has been added to the global scope.
 if (typeof window !== "undefined" && window.Vue) {
-  window.Vue.use(HelloWorldSimple);
+  window.Vue.use(VueHealthPlugin);
 }
 
-export default HelloWorldSimple;
+export default VueHealthPlugin;
