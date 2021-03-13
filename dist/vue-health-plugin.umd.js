@@ -230,7 +230,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"781fcd68-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HealthPlugin.vue?vue&type=template&id=0fdbe6c4&scoped=true&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"57feca41-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HealthPlugin.vue?vue&type=template&id=0fdbe6c4&scoped=true&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"main-container"},[_c('h1',[_vm._v("Vue Temperature convertor")]),_c('div',{staticClass:"card degree"},[_vm._v(" "+_vm._s(_vm.celcius)),_c('span',[_vm._v("° C ")]),_c('br'),_vm._v(" "+_vm._s(_vm.fahrenheit ? _vm.fahrenheit : "")),_c('span',[_vm._v("° F ")]),_vm._v(" "),_c('br')]),_c('div',{staticClass:"form"},[_c('span',{staticClass:"form-label"},[_vm._v("Enter the temperature in Celcius ")]),_c('br'),_c('br'),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.celcius),expression:"celcius"}],staticClass:"input-class",attrs:{"type":"text","placeholder":"Temperature in Celcius"},domProps:{"value":(_vm.celcius)},on:{"input":function($event){if($event.target.composing){ return; }_vm.celcius=$event.target.value}}})])])}
 var staticRenderFns = []
 
@@ -407,11 +407,15 @@ var component = normalizeComponent(
 /* harmony default export */ var HealthPlugin = (component.exports);
 // CONCATENATED MODULE: ./src/install.js
 
+let someKey = "599u3njfinn_jht748";
 const VueHealthPlugin = {
-  install(Vue) {
-    // Let's register our component globally
-    // https://vuejs.org/v2/guide/components-registration.html
-    Vue.component("health-plugin", HealthPlugin);
+  install(Vue, options = {}) {
+    if (options.key == someKey) {
+      Vue.component("health-plugin", HealthPlugin);
+    } else {
+      console.log("%c !! Vue Health plugin !! Authentication failed ", "color: red; font-size: 20px");
+      console.warn("Authentication failed for health-plugin, please provide a valid encryption key");
+    }
   }
 
 }; // Automatic installation if Vue has been added to the global scope.
