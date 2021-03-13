@@ -230,7 +230,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0d067b45-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HealthPlugin.vue?vue&type=template&id=14d8df32&scoped=true&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fc834d1e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HealthPlugin.vue?vue&type=template&id=14d8df32&scoped=true&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"hello"},[_c('h1',[_vm._v("Vue js Custom Plugin demo :) ")])])}]
 
@@ -378,23 +378,24 @@ var component = normalizeComponent(
 /* harmony default export */ var HealthPlugin = (component.exports);
 // CONCATENATED MODULE: ./src/install.js
 
-var VueHealthPlugin = {
-  install: function install(Vue) {
+const VueHealthPlugin = {
+  install(Vue) {
     // Let's register our component globally
     // https://vuejs.org/v2/guide/components-registration.html
     Vue.component("health-plugin", HealthPlugin);
   }
+
 }; // Automatic installation if Vue has been added to the global scope.
 
 if (typeof window !== "undefined" && window.Vue) {
   window.Vue.use(VueHealthPlugin);
 }
 
-/* harmony default export */ var src_install = (VueHealthPlugin);
+/* harmony default export */ var install = (VueHealthPlugin);
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
-/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src_install);
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (install);
 
 
 

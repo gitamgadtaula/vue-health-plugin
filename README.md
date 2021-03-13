@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # vue-plugin
 
 ## Project setup
@@ -18,7 +17,3 @@ To install it globally.
 If not globally, you can also import the individual components locally.
 
 `` import HealthPlugin from 'vue-health-plugin' ``
-=======
-# vue-health-plugin
-A custom vue js health plugin
->>>>>>> main
