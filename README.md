@@ -1,24 +1,22 @@
 # vue-plugin
 
 ## Project setup
-```
-npm install
-```
+# Using the Package
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Since now have our package published, Let’s take a look at how we can use this package in other repositories
 
-### Compiles and minifies for production
-```
-npm run build
-```
+To Install
 
-### Lints and fixes files
-```
-npm run lint
-```
+npm install --save vue-health-plugin
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Once you have installed the package, in your entry file of the repository (main.js) if you are using it in a Vue CLI project. Write the import command
+
+import HealthPlugin from 'vue-health-plugin'
+
+To install it globally.
+
+Vue.use(HealthPlugin)
+
+If not globally, you can also import the individual components locally.
+
+import HealthPlugin from 'vue-health-plugin'
